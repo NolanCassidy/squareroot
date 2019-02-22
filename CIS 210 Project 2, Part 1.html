@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!-- saved from url=(0071)https://classes.cs.uoregon.edu/16F/cis210/assignments/W2-squareroot.php -->
+<html class="gr__classes_cs_uoregon_edu"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- This is for the <head> section of CIS210 pages,
+     not for the page header in the <body> section. 
+   Include here metadata including css links, etc., 
+   but omit the <title> element which may be specific
+   to each page. 
+   Set $root before calling this.
+-->
+
+
+<meta name="description" content="CIS 210, Computer Science 1">
+<meta name="keywords" content="Computer science, CS1"> 
+<meta name="author" content="Michal Young"> 
+
+   <link rel="stylesheet" type="text/css" href="./CIS 210 Project 2, Part 1_files/cis210.css" media="screen">
+   <link rel="stylesheet" type="text/css" href="./CIS 210 Project 2, Part 1_files/cis210-print.css" media="print">
+
+<title>CIS 210 Project 2, Part 1</title></head>
+
+<body data-gr-c-s-loaded="true">
+<div class="container">
+
+  <!-- pagehead.php: Page header to include on each page -->
+
+<div class="pageheader">
+   <div class="title">
+   <h1>CIS 210, Fall 2016<br> Introduction to Computer Science</h1>
+   </div> <!-- title -->
+   </div> <!-- pageheader -->
+<!-- end pagehead.php -->
+  <!-- sidebar.php:  Sidebar to be replicated on each page 
+     Note links must be relative to site URL-->
+<div class="sidenav">
+   <h1>Main Menu</h1>
+   <ul>
+   <li><a href="https://classes.cs.uoregon.edu/16F/cis210/index.php">Class home page</a></li>
+   <li><a href="https://piazza.com/uoregon/fall2016/cis210/home">Piazza</a></li>
+   <li><a href="https://classes.cs.uoregon.edu/16F/cis210/hints.php">How to Succeed</a></li>
+   <li><a href="https://classes.cs.uoregon.edu/16F/cis210/schedule.php">Schedule</a></li>
+   <li><a href="https://classes.cs.uoregon.edu/16F/cis210/assignments.php">Assignments</a></li>
+   <li><a href="https://classes.cs.uoregon.edu/16F/cis210/references.php">References</a></li>
+  <li><a href="https://classes.cs.uoregon.edu/16F/cis210/exams.php">Exams</a></li>
+<!--
+  <li><a href="/16F/cis210/assignments/Contest.php" >Contest</a></li>
+-->
+   </ul>
+</div>
+
+<div class="content">
+
+<div class="item">
+  <h1>Project 2, Part 2</h1>
+<p>This assignment is due Friday, October 7 at 5pm. Save your Python program
+  in a file called squareroot.py and turn that file in using Canvas.</p>
+<h1>Purpose</h1>
+  <p>Approximate the square root of a number using iteration.
+</p>
+</div>
+
+
+<div class="item">
+<h1>Approximation of the square root of a number</h1>
+
+  <p>We have used the square root function from the math library a number of
+  times in Chapter 2 of the textbook.  This project is for you to write your
+  own approximation function using the following equation:
+  </p>
+  <img src="./CIS 210 Project 2, Part 1_files/squareroot-eqn.jpg" scale="0.1">
+
+  <p>Each value of X should be a better approximation for sqrt(n).
+  </p>
+
+</div>
+<div class="item">
+  <h1>Requirements</h1>
+  <p>You will create a Python program to compute the square root
+  of a number  using the above equation.
+  </p>
+  <code>
+  $ python3 squareroot.py 123.45 -i 50<br>
+  After 50 iterations, sqrt(123.45) = x.xxxxx <br>
+  $ python3 squareroot.py 123.45 -i 99<br>
+  After 99 iterations, sqrt(123.45) = x.xxxxx <br>
+  </code>
+
+  <p>After you have this working, you should compute the difference
+  between the approximate value you have computed and that returned by
+  the sqrt function in the math library, and indicate the percent
+  error, assuming that the value returned by the math library function
+  is correct.  This version of the program should yield the following:
+  </p>
+  <code>
+  $ python3 squareroot.py 123.45 -i 50<br>
+  After 50 iterations, sqrt(123.45) = x.xxxxx; this represents y.yy% error compared to the math library
+  </code>
+
+</div>
+<div class="item">
+  <h1>Getting started</h1>
+  <p>This <a href="https://classes.cs.uoregon.edu/16F/cis210/assignments/base/squareroot.py">starter code</a> 
+    may be helpful.  You will also need the <tt>test_harness.py</tt>
+  library module from the <a href="https://classes.cs.uoregon.edu/16F/cis210/assignments/base/test_harness.py">here</a>.
+    </p>
+    </div>
+<div class="item">
+<h1>Grading</h1>
+<p>35 points possible</p>
+  <ul>
+    <li>15: Program runs and consistently produces correct
+    output for arbitrary positive numbers.
+    5 points if it is on the right track, but does not yield the
+    correct responses.
+    </li>
+
+    <li>10: Follows <a href="https://classes.cs.uoregon.edu/16F/cis210/handouts/styleguide.php">CIS 210 coding guidelines</a>, including author
+    identification and header .</li>
+    <li>10: Clarity.  The program should not only be consistent with
+    the requirements and approach described here, but it should be
+    very easy to read the program and verify its consistency with the
+    spec. </li>
+   </ul>
+</div>
+
+
+
+</div> <!-- class content -->
+
+<!-- pagefoot.php: Page footing to include on each page -->
+<div class="clearer">  </div>
+   <div class="footer">
+
+   <span style="float: left">
+   Contact <a href="mailto:jsventek@uoregon.edu?subject=CIS%20210%20web%20site">webmaster</a>.
+   </span>
+   <span style="float: right">  Based loosely on Transparentia design by Arcsin, from OSWD.org. </span>
+      &nbsp; <!-- Space to put the two floats above.  Setting text justification does not seem to do it. -->
+   </div>
+<!-- Track our traffic ?? -->
+<!-- End pagefoot.php -->
+
+</div> <!-- class container -->
+
+
+
+
+</body><span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span></html>
